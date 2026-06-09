@@ -1,5 +1,12 @@
 const tools = [
   {
+    name: "Sidequest RPG",
+    desc: "Real-life quest board to boost your productivity and make life more fun",
+    tag: "Productivity",
+    href: "https://sidequest-rpg.vercel.app/",
+    soon: false,
+  },
+  {
     name: "AcadXP",
     desc: "Transform Your Academic Journey into an Epic Adventure",
     tag: "Education",
@@ -18,6 +25,13 @@ const tools = [
     desc: "Cook Like a True African Chef",
     tag: "Cooking",
     href: "https://afrochef.dripcodestudio.com/",
+    soon: false,
+  },
+  {
+    name: "DevKit",
+    desc: "Your Ultimate Developer Resource Hub",
+    tag: "Development",
+    href: "https://devkit.dripcodestudio.com/",
     soon: false,
   },
   {
