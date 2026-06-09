@@ -1,9 +1,51 @@
 const tools = [
   {
-    name: "books",
-    desc: "a quieter way to track what you read and what it left you with.",
-    tag: "reading",
+    name: "AcadXP",
+    desc: "Transform Your Academic Journey into an Epic Adventure",
+    tag: "Education",
+    href: "https://acadxp.vercel.app/",
+    soon: false,
+  },
+  {
+    name: "SimpleBudget",
+    desc: "Plan your money. See where it goes.",
+    tag: "Finance",
+    href: "https://simplebudget-sigma.vercel.app/",
+    soon: false,
+  },
+  {
+    name: "AfroChef",
+    desc: "Cook Like a True African Chef",
+    tag: "Cooking",
+    href: "https://afrochef.dripcodestudio.com/",
+    soon: false,
+  },
+  {
+    name: "Timora",
+    desc: "A smart student-friendly calendar and planning tool with many Calendar integration.",
+    tag: "Productivity",
     href: "#",
+    soon: true,
+  },
+  {
+    name: "VoiceUp",
+    desc: "Petition platform for your voice to be heard",
+    tag: "Advocacy",
+    href: "https://github.com/DripCode-Studio/VoiceUp/releases/tag/build-6",
+    soon: false,
+  },
+  {
+    name: "LedgerYear",
+    desc: "Track your expenses, year by year",
+    tag: "Finance",
+    href: "http://ledgeryear.dripcodestudio.com/",
+    soon: false,
+  },
+  {
+    name: "ChronoTasks",
+    desc: "Todo companion: set, track, and complete your goals as the year progresses.",
+    tag: "Productivity",
+    href: "https://tasks2026.dripcodestudio.com/",
     soon: false,
   },
 ];
@@ -100,6 +142,8 @@ function loop() {
 }
 
 renderTools();
+document.getElementById("copyright-year").textContent =
+  `© ${new Date().getFullYear()}. all rights reserved.`;
 
 window.addEventListener("resize", () => {
   resize();
