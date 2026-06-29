@@ -4,11 +4,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
 import { ArrowRight } from "lucide-react";
+import { HeroCanvas } from "./HeroCanvas";
 
 export function Hero() {
   return (
     <section className="relative flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 overflow-hidden">
-      <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_120%_80%_at_50%_40%,rgba(59,130,246,0.18)_0%,transparent_70%),radial-gradient(ellipse_80%_60%_at_20%_60%,rgba(59,130,246,0.10)_0%,transparent_60%),radial-gradient(ellipse_80%_60%_at_80%_30%,rgba(59,130,246,0.08)_0%,transparent_60%)]" />
+      <HeroCanvas />
       
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <motion.div
