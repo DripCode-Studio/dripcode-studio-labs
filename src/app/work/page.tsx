@@ -23,11 +23,18 @@ export default function WorkPage() {
           </p>
         </motion.div>
         
-        <WorkGrid>
-          {works.map((project, i) => (
-            <ProjectCard key={project.slug} project={project} index={i} />
-          ))}
-        </WorkGrid>
+        {works.length > 0 ? (
+          <WorkGrid>
+            {works.map((project, i) => (
+              <ProjectCard key={project.slug} project={project} index={i} />
+            ))}
+          </WorkGrid>
+        ) : (
+          <div className="flex flex-col items-center justify-center py-24 text-center">
+            <p className="text-lg text-muted-foreground mb-2">No client work listed yet.</p>
+            <p className="text-sm text-muted-foreground/60">Case studies are being written. Check back soon.</p>
+          </div>
+        )}
       </Section>
     </Layout>
   );
