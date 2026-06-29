@@ -18,10 +18,10 @@ export function Hero() {
         >
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tighter text-foreground mb-6">
             DripCode <br className="hidden sm:block" />
-            <span className="text-muted-foreground">Output Platform</span>
+            <span className="text-muted-foreground">Studio Labs</span>
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            A studio of systems, tools, and production builds. We experiment in the lab, we execute for clients.
+            The engineering arm of DripCode Studio. We build internal tools, contribute to open source, and ship production-grade client projects — from landing pages to SaaS platforms.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/labs" className="w-full sm:w-auto">

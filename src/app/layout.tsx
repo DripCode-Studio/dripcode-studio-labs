@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DripCode Output Platform",
+  title: "DripCode Studio Labs",
   description:
-    "A studio of systems, tools, and production builds. We experiment in the lab, we execute for clients.",
+    "We build tools that work harder than anyone on your team.",
   openGraph: {
-    title: "DripCode Output Platform",
+    title: "DripCode Studio Labs",
     description:
-      "A studio of systems, tools, and production builds. We experiment in the lab, we execute for clients.",
+      "We build tools that work harder than anyone on your team.",
   },
 };
 

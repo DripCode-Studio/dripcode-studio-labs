@@ -19,7 +19,7 @@ export default function WorkPage() {
         >
           <h1 className="text-4xl font-bold tracking-tight mb-4">Client Work</h1>
           <p className="text-lg text-muted-foreground">
-            Selected case studies of production systems, scale challenges, and zero-to-one builds for our partners.
+            Production builds and engineering work we've delivered for clients.
           </p>
         </motion.div>
         

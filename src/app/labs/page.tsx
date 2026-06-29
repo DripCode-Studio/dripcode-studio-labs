@@ -19,7 +19,7 @@ export default function LabsPage() {
         >
           <h1 className="text-4xl font-bold tracking-tight mb-4">Labs</h1>
           <p className="text-lg text-muted-foreground">
-            Internal experiments, prototypes, and developer tools. We build these to push boundaries and solve our own problems.
+            Tools, experiments, and side projects that automate the friction out of daily life — for individuals, teams, and anyone in between.
           </p>
         </motion.div>
         

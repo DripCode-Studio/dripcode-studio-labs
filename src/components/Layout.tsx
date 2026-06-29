@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { ExternalLink } from "lucide-react";
 import { Nav } from "./Nav";
 
 interface LayoutProps {
@@ -13,7 +14,16 @@ export function Layout({ children }: LayoutProps) {
         {children}
       </main>
       <footer className="py-8 border-t border-border/40 text-center text-xs text-muted-foreground">
-        &copy; {new Date().getFullYear()} DripCode Studio. Output Platform.
+        <p>&copy; {new Date().getFullYear()} DripCode Studio Labs. All rights reserved.</p>
+        <a
+          href="https://www.dripcodestudio.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-flex items-center gap-1 hover:text-foreground transition-colors"
+        >
+          DripCode Studio
+          <ExternalLink className="w-3 h-3" />
+        </a>
       </footer>
     </div>
   );
