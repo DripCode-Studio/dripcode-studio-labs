@@ -8,6 +8,30 @@ export interface WorkItem {
   result?: string;
   year?: string;
   image?: string;
+  youtubeId?: string;
 }
 
-export const works: WorkItem[] = [];
+export const works: WorkItem[] = [
+  {
+    slug: "atlas-build-group",
+    title: "Atlas Build Group",
+    client: "Atlas Build Group",
+    description:
+      "A modern, responsive landing page for an industrial construction and engineering firm. Features 17 distinct sections including hero with animated stats, project masonry gallery, case study spotlight, comparison table, animated counters, team cards, and FAQ accordion — all with staggered scroll animations and a cohesive dark industrial aesthetic.",
+    role: "Frontend Development & UI Implementation",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "shadcn/ui",
+      "Lucide",
+    ],
+    result:
+      "Fully responsive static site with perfect Lighthouse scores, SEO metadata, JSON-LD structured data, and dynamic sitemap generation.",
+    year: "2025",
+    image: "/images/work/atlas-build-group_showcase.png",
+    youtubeId: "0L4C_oFWM_o",
+  },
+];

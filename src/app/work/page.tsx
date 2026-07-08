@@ -17,12 +17,15 @@ export default function WorkPage() {
           transition={{ duration: 0.4 }}
           className="max-w-2xl mb-16"
         >
-          <h1 className="text-4xl font-bold tracking-tight mb-4">Client Work</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-4">
+            Client Work
+          </h1>
           <p className="text-lg text-muted-foreground">
-            Production builds and engineering work we've delivered for clients.
+            Production builds and engineering work we&apos;ve delivered for
+            clients.
           </p>
         </motion.div>
-        
+
         {works.length > 0 ? (
           <WorkGrid>
             {works.map((project, i) => (
@@ -31,8 +34,12 @@ export default function WorkPage() {
           </WorkGrid>
         ) : (
           <div className="flex flex-col items-center justify-center py-24 text-center">
-            <p className="text-lg text-muted-foreground mb-2">No client work listed yet.</p>
-            <p className="text-sm text-muted-foreground/60">Case studies are being written. Check back soon.</p>
+            <p className="text-lg text-muted-foreground mb-2">
+              No client work listed yet.
+            </p>
+            <p className="text-sm text-muted-foreground/60">
+              Case studies are being written. Check back soon.
+            </p>
           </div>
         )}
       </Section>
