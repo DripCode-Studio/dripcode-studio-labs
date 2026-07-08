@@ -7,6 +7,7 @@ import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { works } from "@/data/work";
 import { Tag } from "@/components/Tag";
 import { Button } from "@/components/Button";
+import { PortfolioVideo } from "@/components/PortfolioVideo";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -101,6 +102,17 @@ export default function CaseStudyPage() {
               </>
             )}
           </div>
+
+          {project.youtubeId && (
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold tracking-tight mb-6">Project Walkthrough</h3>
+              <PortfolioVideo
+                title={project.title}
+                youtubeId={project.youtubeId}
+                client={project.client}
+              />
+            </div>
+          )}
 
           <div className="pt-12 border-t border-border/40 text-center">
             <h3 className="text-2xl font-bold tracking-tight mb-4">Need something like this built?</h3>
