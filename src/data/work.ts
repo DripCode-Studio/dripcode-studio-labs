@@ -32,6 +32,6 @@ export const works: WorkItem[] = [
       "Fully responsive static site with perfect Lighthouse scores, SEO metadata, JSON-LD structured data, and dynamic sitemap generation.",
     year: "2025",
     image: "/images/work/atlas-build-group_showcase.png",
-    youtubeId: "Qqy5sZ0wesw",
+    youtubeId: "0L4C_oFWM_o",
   },
 ];
