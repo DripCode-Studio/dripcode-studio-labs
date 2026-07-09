@@ -9,6 +9,7 @@ import { Tag } from "@/components/Tag";
 import { Button } from "@/components/Button";
 import { PortfolioVideo } from "@/components/PortfolioVideo";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { PageMetadata } from "@/components/PageMetadata";
 import { motion } from "framer-motion";
 
 export default function CaseStudyPage() {
@@ -22,6 +23,11 @@ export default function CaseStudyPage() {
   return (
     <Layout>
       <CaseStudyLayout>
+        <PageMetadata
+          title={`${project.title} — DripCode Studio Labs`}
+          description={project.description}
+          ogImage={project.image || undefined}
+        />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

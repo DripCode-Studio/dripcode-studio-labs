@@ -5,11 +5,14 @@ import { Section } from "@/components/Section";
 import { WorkGrid } from "@/components/WorkGrid";
 import { ProjectCard } from "@/components/ProjectCard";
 import { works } from "@/data/work";
+import { PageMetadata } from "@/components/PageMetadata";
+import { seo } from "@/data/seo";
 import { motion } from "framer-motion";
 
 export default function WorkPage() {
   return (
     <Layout>
+      <PageMetadata {...seo["/work"]} />
       <Section>
         <motion.div
           initial={{ opacity: 0, y: 10 }}

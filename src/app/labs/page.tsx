@@ -5,11 +5,14 @@ import { Section } from "@/components/Section";
 import { LabGrid } from "@/components/LabGrid";
 import { LabCard } from "@/components/LabCard";
 import { labs } from "@/data/labs";
+import { PageMetadata } from "@/components/PageMetadata";
+import { seo } from "@/data/seo";
 import { motion } from "framer-motion";
 
 export default function LabsPage() {
   return (
     <Layout>
+      <PageMetadata {...seo["/labs"]} />
       <Section>
         <motion.div
           initial={{ opacity: 0, y: 10 }}

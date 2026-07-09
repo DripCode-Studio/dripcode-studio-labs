@@ -3,12 +3,15 @@
 import { Layout } from "@/components/Layout";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
+import { PageMetadata } from "@/components/PageMetadata";
+import { seo } from "@/data/seo";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 export default function ContactPage() {
   return (
     <Layout>
+      <PageMetadata {...seo["/contact"]} />
       <Section className="max-w-2xl mx-auto pt-24 sm:pt-32">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
