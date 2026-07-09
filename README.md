@@ -1,5 +1,7 @@
 # DripCode Studio Labs
 
+![alt text](dripcode-studio_labs-logo.png)
+
 The engineering arm of [DripCode Studio](https://www.dripcodestudio.com) — a digital agency where design meets code.
 
 ## What this is

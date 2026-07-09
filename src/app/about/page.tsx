@@ -2,12 +2,15 @@
 
 import { Layout } from "@/components/Layout";
 import { Section } from "@/components/Section";
+import { PageMetadata } from "@/components/PageMetadata";
+import { seo } from "@/data/seo";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 export default function AboutPage() {
   return (
     <Layout>
+      <PageMetadata {...seo["/about"]} />
       <Section className="max-w-3xl mx-auto pt-24 sm:pt-32">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
