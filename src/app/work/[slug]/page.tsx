@@ -68,22 +68,16 @@ export default function CaseStudyPage() {
             </p>
             
             <h3 className="text-2xl font-bold tracking-tight mt-12 mb-4">Context</h3>
-            <p>
-              This project was born from a clear operational need. The existing workflow relied on spreadsheets, manual handoffs, and tribal knowledge — a setup that worked at small scale but became a bottleneck as the organization grew.
-            </p>
+            <p>{project.context}</p>
 
             <h3 className="text-2xl font-bold tracking-tight mt-12 mb-4">Problem</h3>
-            <p>
-              The core challenge was fragmentation. Data lived in multiple silos, there was no single source of truth, and every reporting cycle required hours of manual reconciliation. The team needed a unified system that could serve as the operational backbone.
-            </p>
+            <p>{project.problem}</p>
 
             <h3 className="text-2xl font-bold tracking-tight mt-12 mb-4">Solution & Features</h3>
             <ul className="space-y-2 mt-4">
-              <li>Architected a distributed event-driven system</li>
-              <li>Implemented real-time data sync with WebSockets</li>
-              <li>Designed a high-throughput ingestion pipeline</li>
-              <li>Created a modular, extensible UI framework</li>
-              <li>Achieved sub-100ms P99 latency across all read paths</li>
+              {project.features.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
             </ul>
 
             <h3 className="text-2xl font-bold tracking-tight mt-12 mb-6">Tech Stack</h3>
