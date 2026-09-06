@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import type { Lab } from "@/data/labs";
+import { LabStatus, type Lab } from "@/data/labs";
 import { Tag } from "./Tag";
 
 interface LabCardProps {
@@ -11,33 +11,46 @@ interface LabCardProps {
 }
 
 export function LabCard({ lab, index }: LabCardProps) {
-  const isSoon = lab.soon;
+  const { status } = lab;
+  const isLive = status === LabStatus.Active || status === LabStatus.Unmaintained;
+  const isDimmed = !isLive;
 
   const content = (
     <div
       className={`relative flex flex-col justify-between overflow-hidden rounded-xl border p-6 transition-all ${
-        isSoon
+        isDimmed
           ? "border-border/30 bg-card/50 opacity-50 cursor-default"
           : "border-border/50 bg-card transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 group cursor-pointer"
       }`}
       data-testid={`card-lab-${lab.name}`}
     >
       <div className="flex items-start justify-between mb-4">
-        <h3 className={`font-semibold text-lg tracking-tight ${isSoon ? "text-muted-foreground" : "group-hover:text-primary transition-colors"}`}>
+        <h3 className={`font-semibold text-lg tracking-tight ${isDimmed ? "text-muted-foreground" : "group-hover:text-primary transition-colors"}`}>
           {lab.name}
         </h3>
         <div className="flex items-center gap-2">
-          {isSoon ? (
+          {status === LabStatus.Soon && (
             <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-muted/20 text-muted-foreground text-xs font-medium border border-border/30">
               Soon
             </div>
-          ) : (
+          )}
+          {status === LabStatus.Archived && (
+            <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-muted/20 text-muted-foreground text-xs font-medium border border-border/30">
+              Archived
+            </div>
+          )}
+          {status === LabStatus.Unmaintained && (
+            <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-500 text-xs font-medium border border-amber-500/20">
+              No longer maintained
+            </div>
+          )}
+          {status === LabStatus.Active && (
             <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500 text-xs font-medium border border-emerald-500/20">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               Active
             </div>
           )}
-          {!isSoon && (
+          {isLive && (
             <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
           )}
         </div>
@@ -48,12 +61,12 @@ export function LabCard({ lab, index }: LabCardProps) {
       </p>
       
       <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/50">
-        <Tag variant={isSoon ? "muted" : "outline"}>{lab.tag}</Tag>
+        <Tag variant={isDimmed ? "muted" : "outline"}>{lab.tag}</Tag>
       </div>
     </div>
   );
 
-  if (isSoon) {
+  if (isDimmed) {
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
